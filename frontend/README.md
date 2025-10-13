@@ -1,3 +1,11 @@
+2. Apply migrations
+Run the following command to create and apply a migration:
+npx prisma migrate dev --name init
+
+3. Manage your data
+View and edit your data locally by running this command:
+npx prisma studio
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
