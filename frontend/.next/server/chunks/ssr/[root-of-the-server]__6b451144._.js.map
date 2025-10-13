@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/kienp/Documents/EcoGuard/frontend/src/app/about/page.tsx"],"sourcesContent":["export default function AboutPage() {\n  return <h1 className=\"text-2xl font-bold\">About Us</h1>;\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBAAO,mRAAC;QAAG,WAAU;kBAAqB;;;;;;AAC5C","debugId":null}}]
+}
