@@ -1,24 +1,35 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { PT_Sans } from "next/font/google";
+import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
-import Navbar from "./components/Navbar"; // ✅ import navbar
+import { cn } from "@/lib/utils";
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const ptSans = PT_Sans({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
-  title: "EcoGuard - Sentinel 4P Team",
-  description: "A demo app with navigation",
+  title: "WaterWise",
+  description: "Optimize your weekly irrigation schedules and water usage.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Navbar/> {}
-        <main className="p-6">{children}</main> {}
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+      </head>
+      <body className={cn("min-h-screen bg-background font-body antialiased", ptSans.variable)}>
+        {children}
+        <Toaster />
       </body>
     </html>
   );
